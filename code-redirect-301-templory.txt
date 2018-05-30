@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^titanicusa.ir [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.titanicusa.ir [NC]
+RewriteRule ^(.*)$ https://www.titanicuk.com/$1 [L,R=301,NC]

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<img <span style="font-family: b yekan,helvetica,sans-serif; font-size: small;">
+<title>ابزار ساخت کد ابزار تست انلاين و آفلاين</title>
+<center>
+<p>
+	<p>
+	<img alt="" id="posted_image" src="---https//image-logo.png---" /></p>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<link rel="stylesheet" href="http://tools.alborz-design.ir/tools/color-online/css/colorpicker.css" type="text/css" />
+</center>
+<style>
+body{
+	background:url(http://mhmk.vatan-host.ir/mataleb3/background.jpg) center top no-repeat #000;
+	margin:0;
+	padding-top:30px;
+}
+
+body,table,tbody,td,textarea,select,a,tr,div,center,table span{
+	font:11px tahoma;
+	direction:rtl;
+}
+
+.bottom{
+	font-size:10px;
+	padding:10px;
+	margin-bottom:50px;
+	border:1px #ddd solid;
+	border-radius:20px;
+	-moz-border-radius:20px;
+	-ms-border-radius:20px;
+	-webkit-border-radius:20px;
+	-o-border-radius:20px;
+	-khtml-border-radius:20px;
+	width:500px;
+	background: #ffffff;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%);
+	background: linear-gradient(to bottom, #ffffff 0%,#eeeeee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+}
+
+.select{
+	background: #c9de96 !important;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M5ZGU5NiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iIzhhYjY2YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzOTgyMzUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+) !important;
+	background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235)) !important;
+	background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%) !important;
+	background: -o-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%) !important;
+	background: -ms-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+	background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 ) !important;
+	color:#fff !important;
+	text-shadow:-1px -1px 0 #888;
+	-moz-text-shadow:-1px -1px 0 #888;
+	-o-text-shadow:-1px -1px 0 #888;
+	-webkit-text-shadow:-1px -1px 0 #888;
+	-khtml-text-shadow:-1px -1px 0 #888;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+}
+
+textarea{
+	padding:4px;
+}
+.ltr{
+	direction:ltr !important;
+	text-align:left !important;
+}
+
+</style>
+
+<style>
+input{
+font-size:12px;
+background: #2CFFD4;
+border:1px solid #F8FF24;
+padding: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin-top: 2px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+input:hover{
+background: #19B2FF;
+border:1px solid #FFF130;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+</style>
+
+
+
+<style>
+button,input[type=button]{
+border-radius: 4px;
+background-image: -webkit-gradient(linear, center top, center bottom, from(#f5bc00), to(#e17b19));
+background-image: -webkit-linear-gradient(top, #f5bc00, #e17b19);
+background-image: -moz-linear-gradient(top, #f5bc00, #e17b19);
+background-image: -o-linear-gradient(top, #f5bc00, #e17b19);
+background-image: -ms-linear-gradient(top, #f5bc00, #e17b19);
+background-image: linear-gradient(to bottom, #f5bc00, #e17b19);
+
+border:1px solid #F5BC00;
+padding: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin-top: 2px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+</style>
+
+<style>
+.notepaper {
+  position: relative;
+  padding: 29px 20px 20px 45px;
+  width: 500px;
+  line-height: 20px;
+  color: #6a5f49;
+  direction:rtl;
+  text-shadow: 0 1px 1px white;
+  background-color: #f2f6c1;
+  background-image: -webkit-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -webkit-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -moz-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -moz-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -o-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -o-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  border: 1px solid #c3baaa;
+  border-color: rgba(195, 186, 170, 0.9);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+}
+.notepaper:before, .notepaper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.notepaper:before {
+  left: 28px;
+  width: 2px;
+  border: solid #efcfad;
+  border-color: rgba(239, 207, 173, 0.9);
+  border-width: 0 1px;
+}
+.notepaper:after {
+  z-index: -1;
+  left: 0;
+  right: 0;
+  background: rgba(242, 246, 193, 0.9);
+  border: 1px solid rgba(170, 157, 134, 0.7);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.quote {
+  font-family: tahoma;
+  font-size: 14px;
+}
+.jDesign-quotes:before, .jDesign-quotes:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 40px;
+  opacity: .2;
+}
+.jDesign-quotes:before {
+  content: '\201C';
+  margin-left: 4px;
+  margin-right: -8px;
+}
+.jDesign-quotes:after {
+  content: '\201D';
+  margin-right: 4px;
+  margin-left: -8px;
+}
+.quote-by {
+  display: block;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 13px;
+  color: #84775c;
+}
+.lt-ie8 .notepaper {
+  padding: 15px 25px;
+}
+</style>
+
+
+<script type="text/javascript" src="http://alborz-design.ir/theme/wp-content/themes/alborz-design-v1/js/jquery.js"></script><script type="text/javascript" src="http://tools.alborz-design.ir/tools/color-online/js/colorpicker.js"></script><script type="text/javascript" src="http://tools.alborz-design.ir/tools/color-online/js/eye.js"></script><script type="text/javascript" src="http://tools.alborz-design.ir/tools/color-online/js/utils.js"></script><script type="text/javascript" src="http://tools.alborz-design.ir/tools/color-online/js/layout.js?ver=1.0.2"></script></head><body><alborz-design><p style="text-align: center;" id="colorpickerHolder"></p></alborz-design>
+
+</head>
+<body>
+<center>
+<center>
+<div class="notepaper">
+         <figure class="quote">
+            <blockquote class="jDesign-quotes">
+<p>
+	<span style="font-family:b yekan;"><strong>ابزار ساخت کد ابزار تست افلاين</strong> </span></p>
+<p>
+	<br />
+	<span style="font-family:b yekan;">نکات آموزشي در باره اين ابزار:</span></p>
+<p>
+	 </p>
+<p>
+	<span style="font-family:b yekan;">1-اين ابزار براي ساخت کد ابزار تست انلاين يا افلاين کدها ميباشد.</span></p>
+<p>
+	 </p>
+<p>
+	<span style="font-family:b yekan;">2-عبارت هاي خواسته شده را با دقت پر کرده و در جاي فيلد رنگ رنگ html مورد نظر خود را قرار دهيد-شما ميتوانيد جهت استفاده درست از رنگ ها از ابزار بالا( ابزار کد رنگ هاي html).استفاده کنيد</span></p>
+<p>
+	 </p>
+<p>
+	<span style="font-family:b yekan;">3-اين ابزار سري اول ميباشد ولي در ابزارهاي بعدي از نمونه هاي حرفه اي تري استفاده خواهد شد که قابليت پاک کردن نيز داشته باشد</span></p>
+<p>
+	 </p>
+<p>
+	<span style="font-family:b yekan;">4-اين ابزار کاملا توسط سايت ابزار فارسي طراحي و کدنويسي شده است و کپي برداري از آن به هر نحوي غير قانوني ميباشد</span></p>
+	<span style="font-family:b yekan;">5- دقت کنيد که لينک هاي کپي رايت را همراه با http:// وارد کنيد</span></p>
+
+
+
+
+
+</a>
+
+</figcaption>
+         </figure>
+      </div>
+
+<fieldset> <legend><p>
+	<span style="color:#ffffff;"><span style="font-family: b yekan;">ابزار ساخت کد</span></span></p>
+</legend><script>var enkripsi="'1Ar'1G'2C'2;'1Aqrcl'02qv{ng'1F'00amnmp'1C'01dddddd'1@'00'1G'1Aqrcl'02qv{ng'1F'00dmlv/dcokn{'1C'02`'02{gicl'1@'00'1G'w241;'w2464'w246:'w2405'w2464'02'w2405'w240:'w2410'w2405'w2413'02'w240C'w2411'w240C'02'w24C;'w240D'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]3'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2413'w2464'w24CD'02'w240:'w24C;'w24CD'w2413'w2405'w2464'w240D'0:'02'w240A'w2465'w240C'02'w2405'w2411'w240C'w2463'w2405'w240D'w2465'02'w240D'w2413'w2411'w240C'02'w2405'w2410'02'w2413'w2464'w24CD'02'w2465'w2405'02'w2405'w2410'02'w2405'w240:'w2410'w2405'w2413'02'w240:'w2405'w2466'w2405'02'w2405'w2411'w240C'w2463'w2405'w240D'w2465'02'w24C;'w2464'w24AA'w240D'0;'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]1'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2467'w240C'w2464'02'w2405'w246:'w2466'02'w240:'w2405'w24C;'w2411'02'w240C'w2411'w240C'02'w24C;'w240D'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]7'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2467'w240C'w2464'02'w240D'w246:'w2467'02'w240:'w2405'w24C;'w2411'02'w240C'w2411'w240C'02'w24C;'w240D'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]5'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2467'w240C'w2464'02'w2405'w246:'w2466'02'w24C;'w245G'w24AA'02'w2413'w2405'w24AA'w240C'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf];'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2466'w24AA'w2464'w24C;'02'w2467'w240C'w2464'02'w24C;'w245G'w24AA'02'w2413'w2405'w24AA'w240C'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]33'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2467'w240C'w2464'02'w2405'w246:'w2466'02'w24C;'w245G'w24AA'02'w2413'w2405'w24AA'w240C'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]31'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2467'w240C'w2464'02'w240D'w246:'w2467'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]37'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2466'w24AA'w2464'w24C;'02'w2467'w240C'w2464'02'w240D'w246:'w2467'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]35'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'w2467'w240C'w2464'02'w2411'w246:'w2467'02'w24C;'w245G'w24AA'02'w2413'w2405'w24AA'w240C'1C'02'1Aklrwv'02kf'1F'00c`xcpdcpqk]vmmn]kf]3;'00'02v{rg'1F'00vgzv'00'02-'1G'1A`p'02-'1G'2C'2;'1Aqapkrv'1Gdwlavkml'02c`xcpdcpqk]vmmn]1:05'0:'0;'5@tcp'02egv]amfg'1Ffmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]egv]amfg]1:05'05'0;'1@tcp'02glipkrqk'1F'00mois'00)'00rex'0Aroz'42log'0Acom'00'1@vgiq'1F'00'00'1@dmp'02'0:k'1F2'1@k'1Aglipkrqk,nglevj'1@k))'0;'5@'02vgiq)'1FQvpkle,dpmoAjcpAmfg'0:glipkrqk,ajcpAmfgCv'0:k'0;'7G0'0;'5Fkd'0:lgu'02PgeGzr'0:wlgqacrg'0:vgiq'0;'0A'05eko'05'0;,vgqv'0:fmawoglv,fmawoglvGngoglv,kllgpJVON'0;'1F'1Fdcnqg'0;'5@tcp'02glipkrqk'1F'00http'053A//moisrex'0A'00)'00roz'42log'0Acom/page/Cop'5@'7FRight'00'1@vgiq'1F'00'00'1@dmp'02'0:k'1F2'1@k'1Aglipkrqk,nglevj'1@k))'0;'5@'02vgiq)'1FQvpkle,dpmoAjcpAmfg'0:glipkrqk,ajcpAmfgCv'0:k'0;'7G0'0;'5F'1@uklfmu,nmacvkml'1Fwlgqacrg'0:vgiq'0;'1@'5F'1@egv]amfg,tcnwg'1F'05'1A'03FMAV[RG'02jvon'02RW@NKA'02'00/'7A-'7A-U1A'7A-'7A-FVF'02ZJVON'023,2'02Vpclqkvkmlcn'7A-'7A-GL'00'02'00jvvr'1C'7A-'7A-uuu,u1,mpe'7A-VP'7A-zjvon3'7A-FVF'7A-zjvon3/vpclqkvkmlcn,fvf'00'1G'7Al'1Ajvon'02zonlq'1F'00jvvr'1C'7A-'7A-uuu,u1,mpe'7A-3;;;'7A-zjvon'00'1G'7Al'1Ajvon'1G'7Al'7Al'1Ajgcf'1G'7Al'7Al'1Avkvng'1G'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]3'05'0;,tcnwg)'05'1A'7A-vkvng'1G'7Al'7Al'1Aqapkrv'02v{rg'1F'00vgzv'7A-hctcqapkrv'00'1G'02'7Al'7Al'02'7Al'7Altcp'02gfkv`mzJVON'02'1F'02'7Al'7Al'7A'05'1Ajvon'02ancqq'1F'00gzrclf'02anmqg'00'1G'7A'05'02)'7Al'7Al'7A'05'1Ajgcf'1G'7A'05'02)'7Al'7Al'7A'05'1Aqv{ng'02v{rg'1F'00vgzv'7A-aqq'00'1G'7A'05'02)'7Al'7Al'7A'05,gzrclf'02'5@'02ukfvj'1C'02322'07'1@'02jgkejv'1C'02322'07'1@'02'5F'7A'05'02)'7Al'7Al'7A'05,anmqg'02'5@'02`mpfgp'1C'02lmlg'1@'02ocpekl'1C'022rz'1@'02rcffkle'1C'022rz'1@'02'5F'7A'05'02)'7Al'7Al'7A'05jvon'0A`mf{'02'5@'02mtgpdnmu'1C'02jkffgl'1@'02'5F'7A'05'02)'7Al'7Al'7A'05'1A'7A'7A'7A-qv{ng'1G'7A'05'02)'7Al'7Al'7A'05'1A'7A'7A'7A-jgcf'1G'7A'05'02)'7Al'7Al'7A'05'1A`mf{'02ancqq'1F'00gzrclf'02anmqg'00'02mlnmcf'1F'00fmawoglv,d,vc,dmawq'0:'0;'1@'02fmawoglv,d,vc,qgngav'0:'0;'1@'00'1G'7A'05'02)'7Al'7Al'7A'05'1Admpo'02ancqq'1F'00gzrclf'02anmqg'00'02lcog'1F'00d'00'1G'7A'05'02)'7Al'7Al'7A'05'1Avgzvcpgc'02ancqq'1F'00gzrclf'02anmqg'00'02qv{ng'1F'00`caiepmwlf'1C'02'01'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]1'05'0;,tcnwg)'05'1@'00'02lcog'1F'00vc'00'02upcr'1F'00jcpf'00'02qrgnnajgai'1F'00dcnqg'00'1G'7A'05'02)'7Al'7Al'7A'05'1A'7A'7A'7A-vgzvcpgc'1G'7A'05'02)'7Al'7Al'7A'05'1A'7A'7A'7A-dmpo'1G'7A'05'02)'7Al'7Al'7A'05'1A'7A'7A'7A-`mf{'1G'7A'05'02)'7Al'7Al'7A'05'1A'7A'7A'7A-jvon'1G'7A'05'1@'7Al'7Al'02'7Al'7Altcp'02fgdcwnvQvwdd'02'1F'02'7A'05'1Aj3'1G'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]7'05'0;,tcnwg)'05'1A'7A'7A'7A-j3'1G'7A'7Al'7A'05'02)'7Al'7Al'7A'05'1Ar'1G'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]5'05'0;,tcnwg)'05'1A'7A'7A'7A-r'1G'7A'05'1@'7Al'7Al'02'7Al'7Al'7Al'7Altcp'02gzvpcQvwdd'02'1F'02'7A'05'1Afkt'02qv{ng'1F'00rmqkvkml'1Cc`qmnwvg'1@'02ocpekl'1C,1go'1@'02`mvvmo'1C2go'1@'02pkejv'1C2go'1@'00'1G'1Aqocnn'1G'7A'7Al'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf];'05'0;,tcnwg)'05'1Ac'02jpgd'1F'00'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]33'05'0;,tcnwg)'05'00'02vcpegv'1F'00]vmr'00'1G'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]31'05'0;,tcnwg)'05'1A'7A'7A'7A-c'1G'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]37'05'0;,tcnwg)'05'1Ac'02jpgd'1F'00'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]35'05'0;,tcnwg)'05'00'02vcpegv'1F'00]vmr'00'1G'05)fmawoglv,egvGngoglv@{Kf'0:'05c`xcpdcpqk]vmmn]kf]3;'05'0;,tcnwg)'05'1A'7A'7A'7A-c'1G,'7A'7A'1A'7A'7A'7A-qocnn'1G'1A'7A'7A'7A-fkt'1G'7A'05'1@'7Al'7Al'02'7Al'7Altcp'02mnf'02'1F'02'7A'05'7A'05'1@'7Al'7Al'02'02'02'02'02'02'02'02'02'7Al'7Aldwlavkml'02klkv'0:'0;'7Al'7Al'5@'7Al'7Al'02'02uklfmu,gfkv`mz,fmawoglv,upkvg'0:gfkv`mzJVON'0;'1@'7Al'7Al'02'02uklfmu,gfkv`mz,fmawoglv,anmqg'0:'0;'1@'7Al'7Al'02'02uklfmu,gfkv`mz,fmawoglv,d,vc,tcnwg'02'1F'02fgdcwnvQvwdd'1@'7Al'7Al'02'02wrfcvg'0:'0;'1@'7Al'7Al'5F'7Al'7Al'02'7Al'7Aldwlavkml'02wrfcvg'0:'0;'7Al'7Al'5@'7Al'7Al'02'02tcp'02vgzvcpgc'02'1F'02uklfmu,gfkv`mz,fmawoglv,d,vc'1@'7Al'7Al'02'02tcp'02f'02'1F'02f{lcokadpcog,fmawoglv'1@'02'7Al'7Al'02'7Al'7Al'02'02kd'02'0:mnf'02'03'1F'02vgzvcpgc,tcnwg'0;'02'5@'7Al'7Al'02'02'02'02mnf'02'1F'02vgzvcpgc,tcnwg'1@'7Al'7Al'02'02'02'02f,mrgl'0:'0;'1@'7Al'7Al'02'02'02'02f,upkvg'0:mnf'0;'1@'7Al'7Al'02'02'02'02kd'02'0:mnf,pgrncag'0:'7A-'7@'7A'7Ap'7A'7Al'7F'7A-e'0A'7A'05'7A'05'0;'02'1F'1F'02fgdcwnvQvwdd,pgrncag'0:'7A-'7@'7A'7Ap'7A'7Al'7F'7A-e'0A'7A'05'7A'05'0;'0;'7Al'7Al'02'02'02'02'02'02f,upkvg'0:gzvpcQvwdd'0;'1@'7Al'7Al'02'02'02'02f,anmqg'0:'0;'1@'7Al'7Al'02'02'5F'7Al'7Al'02'7Al'7Al'02'02uklfmu,qgvVkogmwv'0:wrfcvg'0A'02372'0;'1@'7Al'7Al'5F'7Al'7Al'02'7Al'7Al'1A'7A-qapkrv'1G'7Al'7Al'1A'7A-jgcf'1G'7Al'7Al'02'7Al'7Al'1Adpcogqgv'02pgqkxc`ng'1F'00{gq'00'02pmuq'1F'0072'07'0A('00'02mlnmcf'1F'00klkv'0:'0;'1@'00'1G'7Al'7Al'02'02'1A'03//'02c`mwv'1C`ncli'02amldwqgq'02mrgpc'0A'02qm'02wqg'02hctcqapkrv'1C'02WPNq'02klqvgcf'02//'1G'7Al'7Al'02'02'1Adpcog'02lcog'1F'00gfkv`mz'00'02qpa'1F'00hctcqapkrv'1C'7A'05'7A'05'1@'00'1G'7Al'7Al'02'02'1Adpcog'02lcog'1F'00f{lcokadpcog'00'02qpa'1F'00hctcqapkrv'1C'7A'05'7A'05'1@'00'1G'7Al'7Al'1A'7A-dpcogqgv'1G'7Al'7Al'02'7Al'7Al'1A'7A-jvon'1G'05'1@egv]amfg,qv{ng,fkqrnc{'1F'05'05'1@'5F'1A-qapkrv'1G'1A-qrcl'1G'1A-qrcl'1G'1A-r'1G'2C'1Aaglvgp'1G'2C'2;'1Afkt'02qv{ng'1F'00rmqkvkml'1Cc`qmnwvg'1@vmr'1C/022'07'1@'00'1G'2C'2;'2;'1Aqrcl'02qv{ng'1F'00dmlv/dcokn{'1C`'02{gicl'1@'00'1G'1Ac'02jpgd'1F'00jvvr'1C--omkqpgz,pmx`nme,amo-'00'1G'1Aqrcl'02qv{ng'1F'00amnmp'1C'01dddddd'1@'00'1G'w24C;'w240D'w2411'w240C'w2405'w2464'1A-qrcl'1G'1A-c'1G'1A-qrcl'1G'1A-fkt'1G'2C'2;'2;'2C'2;'2;'2C'2;'1Aqrcl'02qv{ng'1F'00dmlv/dcokn{'1C`'02{gicl'1@'00'1G'1A`wvvml'02mlankai'1F'00c`xcpdcpqk]vmmn]1:05'0:'0;'1@'00'1G'w2411'w2405'w240G'w240C'02'w24C;'w240D'1A-`wvvml'1G'1A-qrcl'1G'1A`p'02-'1G'2C'2;'1Avgzvcpgc'02kf'1F'00c`xcpdcpqk]vmmn]egv]amfg]1:05'00'02qv{ng'1F'00fkqrnc{'1Clmlg'1@'00'1G'1A-vgzvcpgc'1G'1A-aglvgp'1G'1Avgzvcpgc'02qv{ng'1F'00ukfvj'1Ccwvm'1@jgkejv'1Ccwvm'1@'00'02kf'1F'00omkqpgz]vmmn]amfg'00'1G'w24C;'w2405'w2413'w240:'w2413'02'w241;'w2410'w24AA'w2410'02'02'w240:'w241;'w240D'02'w2405'w2410'02'w2411'w2405'w240G'w240C'02'w24C;'w240D'02'w240A'w2465'w240C'02'w2405'w2411'w240C'w2463'w2405'w240D'w2465'02'w2400'w2464'w2466'w2405'w24AA'w2464'02'w2400'w2464'02'w2413'w2405'02'w240D'w2413'02'w2417'w2463'w240F'w2405'w240C'02'w240A'w240D'w2405'w24CD'w2405'w2464'w2465'02'w240:'w24C;'w2405'w2413'02'w240:'w240:'w2413'w24AA'02'w246:'02'w240A'w2465'w240C'02'w2405'w2411'w240C'w2463'w2405'w240D'w2465'02'w2400'w2463'w2466'w2405'w24AA'w2464'02'w2400'w2464'02'w2413'w2405'02'w240:'w2405'02'w2463'w2413'w2467'w240C'02,jvon'02'w2412'w240G'w24AA'w2413'w2465'02'w2464'w2467'w2405'w24AA'w24AA'w240D'1C'1A-vgzvcpgc'1G'2C'2;'1A-fkt'1G"; teks=""; teksasli="";var panjang;panjang=enkripsi.length;for (i=0;i<panjang;i++){ teks+=String.fromCharCode(enkripsi.charCodeAt(i)^2) }teksasli=unescape(teks);document.write(teksasli);</script>
+	</div>
+ </fieldset>
+<p>
+	<span style="font-size:28px;"><span style="font-family: comic sans ms,cursive;"><span style="color:#ffffff;">programming by : </span><a href="https://titanicusa.000webhostapp.com"><span style="color:#ffffff;">TITANIC TOOLS</span></a></span></span></p>
+
+</center>
+</div>
+<style>
+.abzarfarsi_tools{
+	direction:rtl;
+	text-align:right;
+	font:11px tahoma;
+}
+.abzarfarsi_tools ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.abzarfarsi_tools ul li{
+	border:1px #EEE solid;
+	background:#f9f9f9;
+	padding:10px;
+	margin:5px;
+}
+.abzarfarsi_tools *{
+	font:11px tahoma;
+}
+.abzarfarsi_tools textarea{
+	width:300px;
+	height:150px;
+	direction:ltr;
+}
+.abzarfarsi_tools input[type=text]{
+	direction:rtl;
+}
+
+
+</html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ابزار ساخت کد ابزار تست آفلاین و آنلاین کدها</title>
+</head>
+
+<body>
+</body>
+</html>
